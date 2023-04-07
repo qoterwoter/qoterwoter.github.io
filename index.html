@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__user-image">
+            <img class="image" src="./images/portoflio__user.JPG" alt="">
+        </div>
+        <div class="header__about about">
+            <div class="about__contact contact">
+                <div class="contact__user-info">
+                    <h1 class="contact__name">Alexander Tsalapov</h1>
+                    <p class="contact__specialization">Front-end developer</p>
+                </div>
+                <div class="contact__contacts-information contacts-information">
+                    <a class="contacts-information__link" href="mailto:marderics@gmail.com">Email</a>
+                    <a class="contacts-information__link" href="https://t.me/marlborgold">Telegram</a>
+                    <a class="contacts-information__link" href="https://github.com/qoterwoter">GitHub</a>
+                </div>
+            </div>
+            <div class="about__description">
+                <p>
+                    Выполнял проекты на React, Django в рамках учебных проектов.<br/>
+                    Много выполнял и выполняю задач на
+                    <a href="https://leetcode.com/marderics/">Leetcode</a> и
+                    <a href="https://www.codewars.com/users/qoterwater">CodeWars</a>:
+                </p>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="skills">
+            <h2 class="skills__title">Навыки</h2>
+            <article class="skills__skill skill">
+                <p class="skill__title">JavaScript</p>
+                <div class="skill__load-bar skill__load-bar_js"></div>
+            </article>
+            <article class="skills__skill skill">
+                <p class="skill__title">HTML</p>
+                <div class="skill__load-bar skill__load-bar_html"></div>
+            </article>
+            <article class="skills__skill skill">
+                <p class="skill__title">CSS</p>
+                <div class="skill__load-bar skill__load-bar_css"></div>
+            </article>
+            <article class="skills__skill skill">
+                <p class="skill__title">React</p>
+                <div class="skill__load-bar skill__load-bar_react"></div>
+            </article>
+            <article class="skills__skill skill">
+                <p class="skill__title">Redux</p>
+                <div class="skill__load-bar skill__load-bar_redux"></div>
+            </article>
+        </section>
+        <section class="projects">
+            <h1 class="projects__title">2 Проекта</h1>
+            <article class="project">
+                <div class="project__image">
+                    <img class="image" src="./images/finnesse.png" alt="">
+                </div>
+                <div class="project__about">
+                    <p class="project__tags">#Pug #HTML #SCSS #responsive</p>
+                    <h3 class="project__title">Finnesse.cc</h3>
+                    <p class="project__description">Веб-страница со списком концертов, данные берутся с гугл таблиц.
+                        Раз в полчаса генерируется страница из pug файла.</p>
+                    <div class="project__actions actions">
+                        <a href="https://github.com/qoterwoter/finnesse" class="actions__action actions__action_git">GitHub</a>
+                        <a href="http://www.finnesse.cc/" class="actions__action">Сайт</a>
+                    </div>
+                </div>
+            </article>
+            <article class="project">
+                <div class="project__image">
+                    <img class="image" src="./images/gallery.png" alt="">
+                </div>
+                <div class="project__about">
+                    <p class="project__tags">#HTML #SCSS #responsive</p>
+                    <h3 class="project__title">MyGallery</h3>
+                    <p class="project__description">In this project, I work with HTML and CSS to create a responsive page.
+                        The design is from devchallenge.io. Donec aliquam est dui, vel vestibulum diam sollicitudin id.
+                        Quisque feugiat malesuada molestie. </p>
+                    <div class="project__actions actions">
+                        <a href="https://github.com/qoterwoter/finnesse" class="actions__action actions__action_git">GitHub</a>
+                        <a href="http://www.finnesse.cc/" class="actions__action">Сайт</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="hobbies">
+            <h2 class="hobbies__title">Хобби</h2>
+            <article class="hobie">
+                <img src="./images/music.jpg" alt="" class="hobie__image">
+                <h3 class="hobie__title">Музыка</h3>
+            </article>
+            <article class="hobie">
+                <img src="./images/games.jpg" alt="" class="hobie__image">
+                <h3 class="hobie__title">Игры</h3>
+            </article>
+            <article class="hobie">
+                <img src="./images/coding.png" alt="" class="hobie__image">
+                <h3 class="hobie__title">Программирование</h3>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__description">Written by <span class="footer__description_nickname">marlboro gold</span></p>
+    </footer>
+</body>
+</html>

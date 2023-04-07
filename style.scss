@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$gray-1: #333333;
+$gray-2: #4F4F4F;
+$gray-3: #828282;
+
+$primary: #2F80ED;
+
+
+$gap: 30px;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #009dff;
+    text-decoration: none;
+    transition: .3s;
+
+    &:hover {
+        color: $gray-2;
+    }
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: $gray-3;
+
+    background: #F2F2F2;
+    width: 1150px;
+    margin: $gap auto 0 auto;
+
+}
+
+.header, .footer {
+    padding: 25px;
+    margin-bottom: $gap;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 5px 10px 16px rgba(0,0,0,0.1);
+}
+
+.footer {
+    text-align: center;
+    .footer__description_nickname {
+        text-decoration: underline;
+        font-weight: 600;
+    }
+}
+
+.header {
+    display: flex;
+
+    .header__user-image .image {
+        width: 270px;
+        height: auto;
+        border-radius: 12px;
+        margin-right: 30px;
+    }
+
+    .header__about {
+        width: 100%;
+
+        .about__contact {
+            display: flex;
+            justify-content: space-between;
+
+            .contact__user-info {
+                margin-bottom: 35px;
+
+                .contact__name {
+                    font-weight: 600;
+                    font-size: 24px;
+                    margin-bottom: 6px;
+                    color: $gray-2;
+                }
+
+                .contact__specialization {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .about__description {
+            font-size: 18px;
+        }
+    }
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    grid-template-rows: auto;
+    grid-auto-flow: dense;
+    gap: $gap;
+    align-items: start;
+
+    >* {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 5px 10px 16px rgba(0,0,0,0.1);
+    }
+
+    .skills {
+        color: $gray-2;
+
+        .skills__title {
+            font-weight: 500;
+            padding-bottom: 8px;
+        }
+
+        .skill {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 0;
+
+            .skill__title {
+                font-size: 16px;
+            }
+
+            .skill__load-bar {
+                width: 64%;
+                height: 10px;
+                background: #C4C4C4;
+                border-radius: 12px;
+
+                &:before {
+                    display: block;
+                    content: '';
+                    height: 10px;
+                    border-radius: 12px;
+                    background-color: $primary;
+                }
+            }
+
+            .skill__load-bar_js:before {
+                width: 70%;
+            }
+            .skill__load-bar_html:before {
+                width: 80%;
+            }
+            .skill__load-bar_css:before {
+                width: 65%;
+            }
+            .skill__load-bar_react:before {
+                width: 30%;
+            }
+            .skill__load-bar_redux:before {
+                width: 20%;
+            }
+        }
+    }
+
+    .hobbies {
+        .hobbies__title {
+            font-weight: 500;
+            margin-bottom: 26px;
+            color: $gray-2;
+        }
+
+        .hobie {
+            .hobie__title {
+                color: $gray-1;
+                margin-top: 5px;
+                margin-bottom: 20px;
+                font-weight: 600;
+                padding-bottom: 7px;
+                border-bottom: 1px solid #C4C4C4;
+            }
+            .hobie__image {
+                width: 100%;
+                border-radius: 12px;
+            }
+        }
+    }
+
+    .projects {
+        grid-row: span 3;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+
+        >* {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 5px 10px 16px rgba(0,0,0,0.1);
+            margin-bottom: $gap - 10px;
+        }
+
+        .projects__title {
+            font-weight: 500;
+            color: #4F4F4F;
+        }
+
+        .project {
+            display: flex;
+            margin-bottom: $gap;
+            .project__image {
+                margin-right: 30px;
+
+                .image {
+                    display: block;
+                    object-fit: cover;
+                    width: 280px;
+                    height: 280px;
+                    border-radius: 12px;
+                }
+            }
+            .project__about {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                font-weight: 500;
+
+                .project__tags {
+                    color: $gray-2;
+                    word-spacing: 8px;
+                }
+                .project__title {
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: $gray-1;
+                }
+                .project__description {
+                    font-weight: 400;
+                }
+
+                .project__actions {
+                    .actions__action {
+                        display: inline-block;
+                        padding: 11px 40px;
+                        border: 1px solid $primary;
+                        border-radius: 12px;
+                        margin-right: 15px;
+
+                        &:hover {
+                            color: white;
+                            background-color: $primary;
+                            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+                        }
+                    }
+                    .actions__action_git {
+                        background-color: $primary;
+                        color: white;
+
+                        &:hover {
+                            color: $primary;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    $gap: 20px;
+    body {
+        width: 960px;
+    }
+
+    .header {
+        margin-bottom: $gap;
+    }
+
+    .main {
+        gap: $gap;
+        grid-template-columns: 1fr 2fr;
+
+        .projects {
+            .project {
+                margin-bottom: $gap;
+
+                .project__about .project__actions .actions__action{
+                    padding: 7px 15px;
+                    border-radius: 7px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        width: 95%;
+    }
+
+    .header {
+        .header__user-image .image {
+            width: 150px;
+        }
+    }
+
+    .main {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+
+        .hobbies {
+            .hobie .hobie__image {
+                display: none;
+            }
+        }
+        .projects {
+            grid-column: span 2;
+
+            .project:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    .footer {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    .header {
+        flex-direction: column;
+        .header__user-image {
+            margin: 0 0 15px 0;
+            .image {
+                height: 200px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .header__about {
+            .about__contact {
+                margin-bottom: 20px;
+                flex-direction: column;
+
+                .contact__user-info {
+                    margin-bottom: 15px;
+                    .contact__name {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+
+        .projects {
+            grid-column: auto;
+            .project {
+                flex-direction: column;
+                .project__image {
+                    margin: 0 0 10px 0;
+
+                    .image {
+                        width: 100%;
+                        height: 300px;
+                    }
+                }
+                .project__about {
+
+                    .project__tags {
+                        color: $gray-3;
+                        margin-bottom: 15px;
+                    }
+                    .project__title {
+                        margin-bottom: 20px;
+                    }
+                    .project__description {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
