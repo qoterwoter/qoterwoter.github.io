@@ -306,6 +306,9 @@ body {
   .main .projects .project .project__about .project__description {
     margin-bottom: 15px;
   }
+  .main .hobbies .hobie .hobie__image {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
